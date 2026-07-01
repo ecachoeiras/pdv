@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)https://ecachoeiras.github.io/rede-pontinhos/ -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -10,7 +10,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#f5f5f7;--surface:#ffffff;--border:#e0e0e0;--text:#1d1d1f;--text2:#6e6e73;
-  --blue:#185FA5;--green:#0F6E56;--orange:#BA7517;--red:#E24B4A;--yellow:#f5a623;
+  --blue:#185FA5;--green:#0F6E56;--orange:#BA7517;--red:#E24B4A;
   --info-bg:#EBF2FA;--info-c:#185FA5;--warn-bg:#FEF3E2;--warn-c:#854F0B;
   --success-bg:#E8F5E9;--success-c:#2E7D32;--danger-bg:#FEECEC;--danger-c:#C62828;
 }
@@ -18,7 +18,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 input,select,button{font-family:inherit;outline:none;border:0.5px solid var(--border);border-radius:8px;padding:10px 12px;background:var(--surface);color:var(--text)}
 input:focus,select:focus{border-color:var(--blue)}
 .app{max-width:430px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;background:var(--bg)}
-/* HEADER */
 .hdr{background:var(--surface);border-bottom:0.5px solid var(--border);padding:12px 16px;display:flex;align-items:center;gap:8px;position:sticky;top:0;z-index:100}
 .hdr h1{font-size:16px;font-weight:600}
 .sdot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0}
@@ -26,15 +25,12 @@ input:focus,select:focus{border-color:var(--blue)}
 .sdot.busy{background:var(--orange);animation:blink .7s infinite alternate}
 @keyframes blink{to{opacity:.2}}
 .pvbadge{font-size:11px;background:var(--info-bg);color:var(--info-c);padding:3px 10px;border-radius:20px;margin-left:auto;cursor:pointer;white-space:nowrap}
-/* NAV */
 .nav{display:flex;background:var(--surface);border-top:0.5px solid var(--border);position:sticky;bottom:0;z-index:100}
 .nav button{flex:1;padding:10px 4px 8px;border:none;background:none;font-size:10px;color:var(--text2);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;border-radius:0}
 .nav button.active{color:var(--blue)}
 .nav button svg{width:22px;height:22px}
-/* SCREENS */
 .screen{display:none;flex:1;flex-direction:column;overflow-y:auto}
 .screen.active{display:flex}
-/* PDV */
 .pdv-top{padding:12px 16px;background:var(--surface);border-bottom:0.5px solid var(--border)}
 .srow{display:flex;gap:8px;align-items:center}
 .srow input{flex:1;font-size:14px}
@@ -68,7 +64,6 @@ input:focus,select:focus{border-color:var(--blue)}
 .pb.sel{background:var(--info-bg);border-color:var(--blue);color:var(--blue);font-weight:600}
 .finbtn{width:100%;padding:14px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer}
 .finbtn:disabled{background:#aaa;cursor:not-allowed}
-/* CADASTRO */
 .cadform{padding:16px;display:flex;flex-direction:column;gap:12px}
 .field{display:flex;flex-direction:column;gap:5px}
 .field label{font-size:13px;color:var(--text2);font-weight:500}
@@ -81,7 +76,6 @@ input:focus,select:focus{border-color:var(--blue)}
 .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
 .tag{font-size:11px;padding:2px 8px;border-radius:20px;background:var(--bg);color:var(--text2)}
 .delbtn{background:none;border:none;cursor:pointer;color:var(--red);font-size:20px;padding:0;border-radius:0}
-/* CONFIG */
 .cfgwrap{padding:16px;display:flex;flex-direction:column;gap:12px}
 .cfgcard{background:var(--surface);border:0.5px solid var(--border);border-radius:12px;padding:16px}
 .cfgcard h3{font-size:15px;font-weight:600;margin-bottom:8px}
@@ -97,7 +91,6 @@ input:focus,select:focus{border-color:var(--blue)}
 .pvi{padding:13px 12px;border:0.5px solid var(--border);border-radius:8px;cursor:pointer;font-size:14px;display:flex;align-items:center;gap:10px}
 .pvi.sel{border-color:var(--blue);background:var(--info-bg);color:var(--blue);font-weight:600}
 .pvdot{width:8px;height:8px;border-radius:50%;background:var(--green)}
-/* RELATORIOS */
 .relwrap{padding:16px;display:flex;flex-direction:column;gap:12px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .frow select{font-size:13px}
@@ -116,7 +109,6 @@ input:focus,select:focus{border-color:var(--blue)}
 .pleg{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .pli{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text2)}
 .pdot{width:9px;height:9px;border-radius:50%}
-/* OVERLAYS */
 .ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;align-items:flex-end}
 .ov.open{display:flex}
 .pvsheet{background:var(--surface);border-radius:18px 18px 0 0;padding:20px 16px;width:100%;max-height:75vh;overflow-y:auto}
@@ -131,115 +123,40 @@ input:focus,select:focus{border-color:var(--blue)}
 .vok .ico{font-size:42px}
 .vok .vt{font-size:19px;font-weight:700;margin:8px 0 4px}
 .vok small{font-size:13px;color:var(--text2);line-height:1.5}
-/* APPS SCRIPT CODE COPY */
-.codebox{background:var(--bg);border-radius:8px;padding:12px;font-family:monospace;font-size:11px;overflow-x:auto;white-space:pre;color:var(--text);border:0.5px solid var(--border);margin-bottom:8px;max-height:160px;overflow-y:auto}
-.copybtn{padding:10px;width:100%;border:0.5px solid var(--border);border-radius:8px;background:none;font-size:13px;cursor:pointer;color:var(--text)}
 </style>
 </head>
 <body>
 <div class="app">
   <div class="hdr">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     <h1 id="htitle">Caixa</h1>
-    <span class="sdot off" id="sdot" title="4 pendente(s)"></span>
+    <span class="sdot" id="sdot" title="Verificando conexão..."></span>
     <span class="pvbadge" id="pvb" onclick="openPV()">📍 Ponto 1</span>
   </div>
 
-  <!-- PDV -->
   <div class="screen active" id="screen-pdv">
     <div class="pdv-top">
       <div class="srow">
         <input type="text" id="psearch" placeholder="Buscar produto…" oninput="renderGrid()">
         <button class="xbtn" id="xbtn" onclick="toggleX()">Xepa</button>
       </div>
-      <div class="pgrid" id="pgrid"><div class="pc" onclick="addC(1)">
-      <div class="ai">+</div>
-      <div class="pn">Alface crespa</div>
-      <div class="pf">Sítio Boa Vista</div>
-      <div class="pp">R$ 4.50/kg</div>
-      
-      <div class="pe">Estoque: 30.0 kg</div>
-    </div><div class="pc" onclick="addC(2)">
-      <div class="ai">+</div>
-      <div class="pn">Tomate cereja</div>
-      <div class="pf">Fazenda Sol</div>
-      <div class="pp">R$ 8.90/kg</div>
-      
-      <div class="pe">Estoque: 19.0 kg</div>
-    </div><div class="pc" onclick="addC(3)">
-      <div class="ai">+</div>
-      <div class="pn">Chuchu</div>
-      <div class="pf">Coop. Verde</div>
-      <div class="pp">R$ 2.80/kg</div>
-      
-      <div class="pe">Estoque: 39.0 kg</div>
-    </div><div class="pc" onclick="addC(4)">
-      <div class="ai">+</div>
-      <div class="pn">Batata doce</div>
-      <div class="pf">Sítio Raiz</div>
-      <div class="pp">R$ 5.50/kg</div>
-      
-      <div class="pe">Estoque: 50.0 kg</div>
-    </div><div class="pc" onclick="addC(5)">
-      <div class="ai">+</div>
-      <div class="pn">Cenoura</div>
-      <div class="pf">Fazenda Sol</div>
-      <div class="pp">R$ 3.90/kg</div>
-      
-      <div class="pe">Estoque: 34.0 kg</div>
-    </div><div class="pc" onclick="addC(6)">
-      <div class="ai">+</div>
-      <div class="pn">Brócolis</div>
-      <div class="pf">Coop. Verde</div>
-      <div class="pp">R$ 6.50/kg</div>
-      
-      <div class="pe">Estoque: 24.0 kg</div>
-    </div><div class="pc" onclick="addC(7)">
-      <div class="ai">+</div>
-      <div class="pn">Beterraba</div>
-      <div class="pf">Sítio Raiz</div>
-      <div class="pp">R$ 4.00/kg</div>
-      
-      <div class="pe">Estoque: 30.0 kg</div>
-    </div><div class="pc" onclick="addC(8)">
-      <div class="ai">+</div>
-      <div class="pn">Couve-flor</div>
-      <div class="pf">Sítio Boa Vista</div>
-      <div class="pp">R$ 7.00/kg</div>
-      
-      <div class="pe">Estoque: 20.0 kg</div>
-    </div><div class="pc" onclick="addC(9)">
-      <div class="ai">+</div>
-      <div class="pn">Repolho</div>
-      <div class="pf">Coop. Verde</div>
-      <div class="pp">R$ 2.50/kg</div>
-      
-      <div class="pe">Estoque: 45.0 kg</div>
-    </div><div class="pc" onclick="addC(10)">
-      <div class="ai">+</div>
-      <div class="pn">Pimentão</div>
-      <div class="pf">Fazenda Sol</div>
-      <div class="pp">R$ 9.00/kg</div>
-      
-      <div class="pe">Estoque: 18.0 kg</div>
-    </div></div>
+      <div class="pgrid" id="pgrid"></div>
     </div>
     <div class="cart-area" id="cart"><div class="empty">Toque em um produto para adicionar</div></div>
-    <div id="tarea" style="display: none;">
+    <div id="tarea" style="display:none">
       <div class="tarea">
-        <div class="trow"><span class="tlabel">Total</span><span class="tval" id="tv">R$ 22,10</span></div>
+        <div class="trow"><span class="tlabel">Total</span><span class="tval" id="tv">R$ 0,00</span></div>
         <div class="pgrid2">
-          <button class="pb" onclick="selP(&#39;Dinheiro&#39;)">💵 Dinheiro</button>
-          <button class="pb" onclick="selP(&#39;Crédito&#39;)">💳 Crédito</button>
-          <button class="pb" onclick="selP(&#39;Débito&#39;)">🏦 Débito</button>
-          <button class="pb sel" onclick="selP(&#39;Pix&#39;)">⚡ Pix</button>
+          <button class="pb" onclick="selP('Dinheiro')">💵 Dinheiro</button>
+          <button class="pb" onclick="selP('Crédito')">💳 Crédito</button>
+          <button class="pb" onclick="selP('Débito')">🏦 Débito</button>
+          <button class="pb" onclick="selP('Pix')">⚡ Pix</button>
         </div>
         <button class="finbtn" id="finbtn" onclick="finVenda()">Finalizar venda</button>
       </div>
     </div>
   </div>
 
-  <!-- CADASTRO -->
   <div class="screen" id="screen-cad">
     <div class="cadform">
       <div class="field"><label>Nome do produto</label><input type="text" id="cn" placeholder="Ex: Alface crespa"></div>
@@ -255,191 +172,65 @@ input:focus,select:focus{border-color:var(--blue)}
     <div class="clist" id="clist"></div>
   </div>
 
-  <!-- RELATORIOS -->
   <div class="screen" id="screen-rel">
     <div class="relwrap">
       <div class="frow">
-        <select id="rpv" onchange="renderRel()"><option value="all">Todos os pontos</option><option value="0">Ponto 1</option><option value="1">Ponto 2</option><option value="2">Ponto 3</option><option value="3">Ponto 4</option><option value="4">Ponto 5</option><option value="5">Ponto 6</option><option value="6">Ponto 7</option><option value="7">Ponto 8</option></select>
-        <select id="rmes" onchange="renderRel()"><option value="all">Todo período</option><option value="2026-03">Mar 2026</option><option value="2026-02">Fev 2026</option><option value="2026-01">Jan 2026</option><option value="2025-12">Dez 2025</option><option value="2025-11">Nov 2025</option></select>
+        <select id="rpv" onchange="renderRel()"><option value="all">Todos os pontos</option></select>
+        <select id="rmes" onchange="renderRel()"><option value="all">Todo período</option></select>
       </div>
-      <div id="rcontent">
-    <div class="rcard"><h3>Resumo geral</h3>
-      <div class="sgrid">
-        <div class="sbox"><div class="sl">Volume total</div><div class="sv">118.2 kg</div></div>
-        <div class="sbox"><div class="sl">Faturamento</div><div class="sv">R$643</div></div>
-        <div class="sbox"><div class="sl">Nº de vendas</div><div class="sv">60</div></div>
-        <div class="sbox"><div class="sl">Ticket médio</div><div class="sv">R$10.72</div></div>
-      </div>
-    </div>
-    <div class="rcard"><h3>Formas de pagamento</h3>
-      <div class="pbar"><div class="pseg" style="width:28.2%;background:#854F0B"></div><div class="pseg" style="width:35.1%;background:#185FA5"></div><div class="pseg" style="width:24.1%;background:#3C3489"></div><div class="pseg" style="width:12.6%;background:#0F6E56"></div></div>
-      <div class="pleg"><div class="pli"><span class="pdot" style="background:#854F0B"></span>Débito: R$181.14</div><div class="pli"><span class="pdot" style="background:#185FA5"></span>Dinheiro: R$225.96</div><div class="pli"><span class="pdot" style="background:#3C3489"></span>Pix: R$155.24</div><div class="pli"><span class="pdot" style="background:#0F6E56"></span>Crédito: R$80.96</div></div>
-    </div>
-    <div class="rcard"><h3>Por ponto de venda</h3>
-      <table class="rtbl"><tbody><tr><th>Ponto</th><th>Kg</th><th>Total</th><th>Nº</th></tr>
-      <tr><td>Ponto 2</td><td>24.6</td><td>R$148.10</td><td>11</td></tr><tr><td>Ponto 5</td><td>21.5</td><td>R$111.39</td><td>10</td></tr><tr><td>Ponto 3</td><td>18.5</td><td>R$94.28</td><td>9</td></tr><tr><td>Ponto 8</td><td>15.7</td><td>R$79.38</td><td>8</td></tr><tr><td>Ponto 1</td><td>14.4</td><td>R$72.13</td><td>8</td></tr><tr><td>Ponto 4</td><td>11.2</td><td>R$61.41</td><td>7</td></tr><tr><td>Ponto 7</td><td>7.8</td><td>R$45.13</td><td>3</td></tr><tr><td>Ponto 6</td><td>4.5</td><td>R$31.48</td><td>4</td></tr></tbody></table></div>
-    <div class="rcard"><h3>Top produtos por volume (kg)</h3>
-      <table class="rtbl"><tbody><tr><th>Produto</th><th>Kg</th><th>Total</th></tr>
-      <tr><td>Pimentão</td><td>24.3</td><td>R$218.70</td></tr><tr><td>Chuchu</td><td>21.9</td><td>R$54.92</td></tr><tr><td>Batata doce</td><td>14.1</td><td>R$62.25</td></tr><tr><td>Alface crespa</td><td>11.7</td><td>R$52.65</td></tr><tr><td>Tomate cereja</td><td>11.0</td><td>R$88.10</td></tr><tr><td>Couve-flor</td><td>10.7</td><td>R$70.00</td></tr></tbody></table></div></div>
+      <div id="rcontent"></div>
     </div>
   </div>
 
-  <!-- CONFIG -->
   <div class="screen" id="screen-cfg">
     <div class="cfgwrap">
       <div class="cfgcard">
         <h3>Conexão Google Sheets</h3>
-        <p>Cole a URL do Apps Script publicado como Web App. Os dados de vendas e produtos serão enviados automaticamente.</p>
+        <p>URL do Apps Script configurada automaticamente. Clique em testar para verificar a conexão.</p>
         <input type="url" id="surl" placeholder="https://script.google.com/macros/s/…">
         <button class="gbtn" onclick="saveUrl()">Salvar e testar conexão</button>
-        <div id="sstat"><span class="pill">✓ URL configurada</span></div>
-      </div>
-      <div class="cfgcard">
-        <h3>Código do Apps Script</h3>
-        <p>Cole este código no seu Google Apps Script (Extensões → Apps Script na planilha):</p>
-        <div class="codebox" id="ascript">const SHEET_ID = 'COLE_O_ID_DA_SUA_PLANILHA_AQUI';
-
-function doPost(e) {
-  const data = JSON.parse(e.postData.contents);
-  const ss = SpreadsheetApp.openById(SHEET_ID);
-
-  if (data.type === 'venda') {
-    const sheet = ss.getSheetByName('Vendas');
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['ID','Data','Ponto','Produto',
-        'Qtd (kg)','Preco/kg','Total R$','Pagamento','Xepa']);
-    }
-    const v = data.payload;
-    sheet.appendRow([v.id, v.data, v.pvNome, v.produto,
-      v.qty, v.preco, v.total, v.pagamento, v.isXepa?'Sim':'Não']);
-  }
-
-  if (data.type === 'produto') {
-    const sheet = ss.getSheetByName('Produtos');
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['ID','Nome','Fornecedor',
-        'Preco Venda','Preco Xepa','Qtd Comprada (kg)','Estoque (kg)']);
-    }
-    const p = data.payload;
-    sheet.appendRow([p.id, p.nome, p.fornecedor,
-      p.preco, p.xepa, p.qtd, p.estoque]);
-  }
-
-  return ContentService
-    .createTextOutput(JSON.stringify({ ok: true }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
-
-function doGet(e) {
-  return ContentService
-    .createTextOutput(JSON.stringify({ status: 'online' }))
-    .setMimeType(ContentService.MimeType.JSON);
-}</div>
-        <button class="copybtn" onclick="copyScript()">Copiar código do Apps Script</button>
+        <div id="sstat"></div>
       </div>
       <div class="cfgcard">
         <h3>Fila de sincronização</h3>
-        <div id="qarea"><div class="qwarn">⚠ 4 venda(s) aguardando sincronização</div></div>
+        <div id="qarea"><div style="font-size:13px;color:var(--text2)">Nenhum item pendente</div></div>
         <button class="sbtn" style="margin-top:10px" onclick="syncAll()">Sincronizar agora</button>
-        <div class="slog" id="slog">10:54:21 Concluído com 4 erro(s).
-10:54:21 ✗ Tomate cereja
-10:54:20 ✗ Chuchu
-10:54:20 ✗ Cenoura
-10:54:19 ✗ Brócolis
-10:54:16 Sincronizando 4 item(s)...
-10:51:23 Concluído com 4 erro(s).
-10:51:23 ✗ Tomate cereja
-10:51:22 ✗ Chuchu
-10:51:21 ✗ Cenoura
-10:51:20 ✗ Brócolis
-10:51:18 Sincronizando 4 item(s)...
-10:50:45 Erro de conexão. Verifique a URL.
-10:50:02 Erro de conexão. Verifique a URL.
-10:48:19 Erro de conexão. Verifique a URL.
-Aguardando atividade…</div>
+        <div class="slog" id="slog">Aguardando atividade…</div>
       </div>
       <div class="cfgcard">
         <h3>Ponto de venda</h3>
-        <div class="pvitems" id="cfgpvlist"><div class="pvi sel" onclick="selCfgPV(0)"><span class="pvdot"></span>Ponto 1</div><div class="pvi " onclick="selCfgPV(1)"><span class="pvdot"></span>Ponto 2</div><div class="pvi " onclick="selCfgPV(2)"><span class="pvdot"></span>Ponto 3</div><div class="pvi " onclick="selCfgPV(3)"><span class="pvdot"></span>Ponto 4</div><div class="pvi " onclick="selCfgPV(4)"><span class="pvdot"></span>Ponto 5</div><div class="pvi " onclick="selCfgPV(5)"><span class="pvdot"></span>Ponto 6</div><div class="pvi " onclick="selCfgPV(6)"><span class="pvdot"></span>Ponto 7</div><div class="pvi " onclick="selCfgPV(7)"><span class="pvdot"></span>Ponto 8</div></div>
+        <div class="pvitems" id="cfgpvlist"></div>
       </div>
     </div>
   </div>
 
   <nav class="nav">
-    <button class="active" id="nav-pdv" onclick="go(&#39;pdv&#39;)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"></path></svg>
-      Caixa
+    <button class="active" id="nav-pdv" onclick="go('pdv')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>Caixa
     </button>
-    <button id="nav-cad" onclick="go(&#39;cad&#39;)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
-      Cadastro
+    <button id="nav-cad" onclick="go('cad')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Cadastro
     </button>
-    <button id="nav-rel" onclick="go(&#39;rel&#39;)" class="">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-      Relatórios
+    <button id="nav-rel" onclick="go('rel')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Relatórios
     </button>
-    <button id="nav-cfg" onclick="go(&#39;cfg&#39;)" class="">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"></path></svg>
-      Config
+    <button id="nav-cfg" onclick="go('cfg')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>Config
     </button>
   </nav>
 </div>
 
-<!-- PV OVERLAY -->
-<div class="ov" id="pvov" onclick="if(event.target===this)this.classList.remove(&#39;open&#39;)">
+<div class="ov" id="pvov" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="pvsheet"><h2>Selecionar ponto de venda</h2><div id="pvlist"></div></div>
 </div>
-
-<!-- CONFIRM OVERLAY -->
-<div class="cov" id="cov"><div class="cbox" id="cbox"><div class="vok">
-    <div class="ico">✅</div>
-    <div class="vt">Venda registrada!</div>
-    <small>4 itens · R$ 22,10 · Ponto 1<br>Enviado ao Google Sheets ✓</small>
-  </div>
-  <button class="bok" style="margin-top:18px" onclick="closeC()">OK</button></div></div>
+<div class="cov" id="cov"><div class="cbox" id="cbox"></div></div>
 
 <script>
+// URL DO APPS SCRIPT FIXA — não precisa configurar em cada aparelho
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwZVibVKpZbGhlKwQb_FoDgcRR0NX2uFE7QoNWg2DIz48d4OBkwyhGsyq9AzgNBJ6Pg/exec';
+
 const PV=['Ponto 1','Ponto 2','Ponto 3','Ponto 4','Ponto 5','Ponto 6','Ponto 7','Ponto 8'];
-let cpv=0,xm=false,cart=[],pay='',prods=[],vendas=[],nid=1,surl='',queue=[],syncing=false;
-
-const SCRIPT_CODE=`const SHEET_ID = 'COLE_O_ID_DA_SUA_PLANILHA_AQUI';
-
-function doPost(e) {
-  const data = JSON.parse(e.postData.contents);
-  const ss = SpreadsheetApp.openById(SHEET_ID);
-
-  if (data.type === 'venda') {
-    const sheet = ss.getSheetByName('Vendas');
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['ID','Data','Ponto','Produto',
-        'Qtd (kg)','Preco/kg','Total R$','Pagamento','Xepa']);
-    }
-    const v = data.payload;
-    sheet.appendRow([v.id, v.data, v.pvNome, v.produto,
-      v.qty, v.preco, v.total, v.pagamento, v.isXepa?'Sim':'Não']);
-  }
-
-  if (data.type === 'produto') {
-    const sheet = ss.getSheetByName('Produtos');
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow(['ID','Nome','Fornecedor',
-        'Preco Venda','Preco Xepa','Qtd Comprada (kg)','Estoque (kg)']);
-    }
-    const p = data.payload;
-    sheet.appendRow([p.id, p.nome, p.fornecedor,
-      p.preco, p.xepa, p.qtd, p.estoque]);
-  }
-
-  return ContentService
-    .createTextOutput(JSON.stringify({ ok: true }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
-
-function doGet(e) {
-  return ContentService
-    .createTextOutput(JSON.stringify({ status: 'online' }))
-    .setMimeType(ContentService.MimeType.JSON);
-}`;
+let cpv=0,xm=false,cart=[],pay='',prods=[],vendas=[],nid=1,surl=SCRIPT_URL,queue=[],syncing=false;
 
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,String(v))}catch(e){}}
 function lj(k,v){try{if(v===undefined){const r=localStorage.getItem(k);return r?JSON.parse(r):null}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
@@ -449,7 +240,9 @@ function load(){
   const v=lj('pdv_vendas');if(v)vendas=v;
   const q=lj('pdv_queue');if(q)queue=q;
   const n=ls('pdv_nid');if(n)nid=parseInt(n)||1;
-  const u=ls('pdv_url');if(u){surl=u;const el=document.getElementById('surl');if(el)el.value=u;}
+  // URL sempre vem do código, mas permite override via Config
+  const u=ls('pdv_url');if(u)surl=u;
+  const el=document.getElementById('surl');if(el)el.value=surl;
 }
 function seedProds(){
   if(prods.length)return;
@@ -464,17 +257,6 @@ function seedProds(){
    ['Repolho','Coop. Verde',2.5,1.0,45],
    ['Pimentão','Fazenda Sol',9.0,4.5,18]
   ].forEach(([n,f,p,x,q])=>prods.push({id:nid++,nome:n,fornecedor:f,preco:p,xepa:x,qtd:q,estoque:q}));
-  const meses=['2025-11','2025-12','2026-01','2026-02','2026-03'];
-  const pags=['Dinheiro','Crédito','Débito','Pix'];
-  for(let i=0;i<60;i++){
-    const pv=Math.floor(Math.random()*8);
-    const m=meses[Math.floor(Math.random()*meses.length)];
-    const d=String(Math.floor(Math.random()*28)+1).padStart(2,'0');
-    const pr=prods[Math.floor(Math.random()*prods.length)];
-    const ix=Math.random()<0.2,q=+(Math.random()*3+0.5).toFixed(1);
-    const preco=ix?pr.xepa:pr.preco;
-    vendas.push({id:nid++,pv,pvNome:PV[pv],data:`${m}-${d}`,produto:pr.nome,qty:q,preco,isXepa:ix,total:+(preco*q).toFixed(2),pagamento:pags[Math.floor(Math.random()*4)]});
-  }
   save();
 }
 
@@ -514,10 +296,10 @@ function renderQ(){
     :'<div style="font-size:13px;color:var(--text2)">Nenhum item pendente</div>';
 }
 async function saveUrl(){
-  surl=document.getElementById('surl').value.trim();
+  const u=document.getElementById('surl').value.trim();
+  if(u)surl=u;
   ls('pdv_url',surl);
   const st=document.getElementById('sstat');
-  if(!surl){st.innerHTML='<span class="pill err">URL removida</span>';updDot();return;}
   st.innerHTML='<span class="pill" style="background:#fff3cd;color:#856404">Testando...</span>';
   try{
     const r=await fetch(surl);const j=await r.json();
@@ -527,18 +309,23 @@ async function saveUrl(){
     }else st.innerHTML='<span class="pill err">Resposta inesperada</span>';
   }catch(e){
     st.innerHTML='<span class="pill err">Erro — verifique a URL e permissões</span>';
-    addLog('Erro de conexão. Verifique a URL.');
+    addLog('Erro de conexão.');
   }
   updDot();
 }
-function copyScript(){
-  navigator.clipboard.writeText(SCRIPT_CODE).then(()=>{
-    const btn=event.target;btn.textContent='✓ Copiado!';setTimeout(()=>btn.textContent='Copiar código do Apps Script',2000);
-  }).catch(()=>alert('Selecione e copie o texto manualmente.'));
-}
 
 load();seedProds();
-document.getElementById('ascript').textContent=SCRIPT_CODE;
+
+// Testa conexão automaticamente ao abrir
+(async()=>{
+  try{
+    const r=await fetch(surl);const j=await r.json();
+    if(j.status==='online'){
+      updDot();
+      if(queue.length)syncAll();
+    }
+  }catch(e){updDot();}
+})();
 
 function go(s){
   document.querySelectorAll('.screen').forEach(e=>e.classList.remove('active'));
@@ -548,12 +335,7 @@ function go(s){
   document.getElementById('htitle').textContent={pdv:'Caixa',cad:'Cadastro',rel:'Relatórios',cfg:'Configurações'}[s];
   if(s==='cad')renderCad();
   if(s==='rel')renderRelFilters();
-  if(s==='cfg'){
-    document.getElementById('surl').value=surl||'';
-    renderQ();
-    if(surl)document.getElementById('sstat').innerHTML='<span class="pill">✓ URL configurada</span>';
-    renderCfgPV();
-  }
+  if(s==='cfg'){renderQ();renderCfgPV();const st=document.getElementById('sstat');st.innerHTML='<span class="pill">✓ URL configurada no código</span>';}
   if(s==='pdv')renderGrid();
 }
 function openPV(){
@@ -640,11 +422,10 @@ async function finVenda(){
   showOk(total,ni);renderCart();renderGrid();
 }
 function showOk(total,n){
-  const synced=surl?'Enviado ao Google Sheets ✓':'Salvo local — configure Sheets na aba Config';
   document.getElementById('cbox').innerHTML=`<div class="vok">
     <div class="ico">✅</div>
     <div class="vt">Venda registrada!</div>
-    <small>${n} ite${n>1?'ns':'m'} · R$ ${total.toFixed(2).replace('.',',')} · ${PV[cpv]}<br>${synced}</small>
+    <small>${n} ite${n>1?'ns':'m'} · R$ ${total.toFixed(2).replace('.',',')} · ${PV[cpv]}<br>Enviado ao Google Sheets ✓</small>
   </div>
   <button class="bok" style="margin-top:18px" onclick="closeC()">OK</button>`;
   document.getElementById('cov').classList.add('open');
@@ -731,6 +512,5 @@ function renderRel(){
 updDot();
 renderGrid();
 </script>
-
-
-</body></html>
+</body>
+</html>
